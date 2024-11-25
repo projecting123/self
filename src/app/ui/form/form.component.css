@@ -1,3 +1,9 @@
+img {
+    height: 3rem;
+    width: 4rem;
+    align-self: center;
+}
+
 .form_container {
     display: flex;
     justify-content: center;
@@ -13,6 +19,18 @@ form {
     padding: 10px 20px;
     width: 350px;
     border-radius: 5px;
+}
+
+.logoAndHeading{
+    display: flex;
+    flex-direction: column;
+}
+#headingText {
+    text-align: center;
+    font-family: "Roboto Slab", serif;
+    font-weight: 400;
+    font-size: 2rem;
+    margin: 0;
 }
 
 .input_container {
@@ -79,7 +97,7 @@ input::-ms-reveal{
     display: none;
 }
 
-.login_btn_container {
+.signup_btn_container {
     align-self: center;
 }
 
@@ -88,7 +106,7 @@ button{
     background-color: #fff;
 }
 
-.login_btn_container button {
+.signup_btn_container button {
     background-color: #347928;
     padding: 6px 10px;
     border-radius: 4px;
@@ -118,4 +136,9 @@ button{
     z-index: 2;
     display: inline-flex;
     border-radius: 4px;
+}
+
+.email-message{
+    opacity: 0.7;
+    font-size: 12px;
 }
