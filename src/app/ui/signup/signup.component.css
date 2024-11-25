@@ -1,0 +1,144 @@
+img {
+    height: 3rem;
+    width: 4rem;
+    align-self: center;
+}
+
+.form_container {
+    display: flex;
+    justify-content: center;
+    min-height: 90vh;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 1px solid;
+    padding: 10px 20px;
+    width: 350px;
+    border-radius: 5px;
+}
+
+.logoAndHeading{
+    display: flex;
+    flex-direction: column;
+}
+#headingText {
+    text-align: center;
+    font-family: "Roboto Slab", serif;
+    font-weight: 400;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.input_container {
+    border: 1px solid;
+    border-radius: 2px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    transition: all 0.1s linear;
+}
+
+.status_icon{
+    padding: 0px 2px;
+    display: inline-flex;
+    color: green;
+    position: absolute;
+    right: 40px;
+    z-index: 3;
+    top: 9px;
+    background-color: #fff;
+}
+
+.status_icon.not_password{
+    right: 10px;
+}
+
+div.input_container:focus-within {
+    border: 1px solid #136409;
+    box-shadow: 0 0 4px 1px #136409;
+}
+
+.defaultOrUnfilledLabel {
+    position: absolute;
+    left: 12px;
+    cursor: text;
+    transition: all 0.1s linear;
+    padding: 0px 4px;
+}
+
+.filledOrFocusedLabel {
+    transform: translateY(-25px);
+    left: 12px;
+    background-color: #fff;
+    font-size: 12px;
+    position: absolute;
+    padding: 0px 4px;
+    transition: all 0.1s linear;
+    z-index: 1;
+}
+
+input {
+    outline: none;
+    padding: 14px 12px;
+    background-color: rgba(0, 0, 0, 0.0);
+    flex-grow: 1;
+    position: relative;
+    z-index: 1;
+    color: #136409;
+    caret-color: #136409;
+    border: none;
+}
+
+input::-ms-reveal{
+    display: none;
+}
+
+.signup_btn_container {
+    align-self: center;
+}
+
+button{
+    border: none;
+    background-color: #fff;
+}
+
+.signup_btn_container button {
+    background-color: #347928;
+    padding: 6px 10px;
+    border-radius: 4px;
+    color: white;
+    transition: all 0.1s linear;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+    border: none;
+    letter-spacing: 1px;
+}
+
+.button_disabled {
+    background-color: #347928;
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+.button_allowed {
+    cursor: pointer;
+}
+
+.visibility{
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    padding: 0px 4px;
+    transition: all 0.3s linear;
+    z-index: 2;
+    display: inline-flex;
+    border-radius: 4px;
+}
+
+.email-message{
+    opacity: 0.7;
+    font-size: 12px;
+}

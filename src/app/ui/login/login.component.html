@@ -1,0 +1,29 @@
+<div class="form_container" @componentAnimation>
+    <form action="" [formGroup]="loginForm">
+        <div class="input_container">
+            <input type="email" formControlName="email" aria-label="Email Input Field" (focus)="onFocus($event)"
+                (blur)="onBlur($event)">
+            <label htmlFor="email" class="defaultOrUnfilledLabel">Email</label>
+            <div @icon class="status_icon not_password" *ngIf="loginForm.get('email')?.valid">
+                <div><mat-icon>check_small</mat-icon></div>
+            </div>
+        </div>
+
+        <div class="input_container">
+            <input #pass type="password" formControlName="password" aria-label="Password Input Field"
+                (focus)="onFocus($event)" (blur)="onBlur($event)">
+            <label htmlFor="password" class="defaultOrUnfilledLabel">Password</label>
+            <div @icon class="status_icon" *ngIf="loginForm.get('password')?.valid">
+                <div><mat-icon>check_small</mat-icon></div>
+            </div>
+            <button @icon type="button" class="visibility" *ngIf="loginForm.value.password?.length !== 0"
+                (click)="isShownPassword(pass)"><mat-icon>{{pass.type == "password" ? "visibility" :
+                    "visibility_off"}}</mat-icon></button>
+        </div>
+
+        <div class="login_btn_container">
+            <button type="button" [ngClass]="!this.loginForm.valid ? 'button_disabled' : 'button_allowed'"
+                aria-label="Submit Button" [disabled]="!loginForm.valid" (click)="onFormSubmit()">Login</button>
+        </div>
+    </form>
+</div>
